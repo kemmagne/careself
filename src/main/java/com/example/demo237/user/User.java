@@ -27,6 +27,18 @@ public class User {
     private String password;
 
     private String role;
-
     private boolean isEnabled = false;
+
+    private int age;
+    private String nationality;
+
+    private String Contact;
+
+    private boolean isAvalable;
+
+    private String photo;
+
+    private boolean isBocked;
+
+
 }
