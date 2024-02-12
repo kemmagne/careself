@@ -1,5 +1,6 @@
 package com.example.demo237.model;
 
+import com.example.demo237.user.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -12,11 +13,15 @@ import lombok.Setter;
 @NoArgsConstructor
 @AllArgsConstructor
 @Table(name = "forum")
-public class forum {
+public class Forum {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long chatid;
+    private Long chatId;
 
     private String contenue;
+
+    @ManyToOne
+    @JoinColumn(name="id")
+    private User user;
 }
